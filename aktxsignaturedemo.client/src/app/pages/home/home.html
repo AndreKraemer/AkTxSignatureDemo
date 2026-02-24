@@ -1,0 +1,165 @@
+<div class="home">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-pattern"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Sample App by Andr&eacute; Kr&auml;mer
+      </div>
+      <h1 class="hero-title">
+        Document Editing &amp;<br>
+        <span class="hero-title-accent">Signature Demo</span>
+      </h1>
+      <p class="hero-description">
+        A sample application that shows how to integrate TX Text Control's document
+        editor, viewer, and electronic signature components into an Angular frontend
+        backed by ASP.NET Core and .NET Aspire. Browse the pages to see each component in action.
+      </p>
+      <div class="hero-actions">
+        <a routerLink="/editor" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+          </svg>
+          Open Editor
+        </a>
+        <a routerLink="/sign" class="btn btn-outline btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 19.5c0 .5-.5 1-1 1H5c-.5 0-1-.5-1-1V5c0-.5.5-1 1-1h8l6 6v9.5z"/>
+            <path d="M7 17s1.5-2 3-2 2 2 4 2 3-2 3-2"/>
+          </svg>
+          Sign a Document
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="features">
+    <div class="features-header">
+      <h2 class="section-title">What's Inside</h2>
+      <p class="section-subtitle">
+        Each page demonstrates a different TX Text Control component
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon feature-icon-blue">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Document Editor</h3>
+        <p class="feature-description">
+          Embeds the TX Text Control WYSIWYG editor via WebSocket.
+          You can create, open, and edit documents, place signature fields, and save back to the server.
+        </p>
+        <a routerLink="/editor" class="feature-link">
+          Open Editor
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon feature-icon-cyan">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Document Viewer</h3>
+        <p class="feature-description">
+          Uses the TX Text Control DocumentViewer middleware to display documents
+          read-only with thumbnail navigation and text search.
+        </p>
+        <a routerLink="/viewer" class="feature-link">
+          Open Viewer
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon feature-icon-green">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 19.5c0 .5-.5 1-1 1H5c-.5 0-1-.5-1-1V5c0-.5.5-1 1-1h8l6 6v9.5z"/>
+            <path d="M7 17s1.5-2 3-2 2 2 4 2 3-2 3-2"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Electronic Signatures</h3>
+        <p class="feature-description">
+          Loads a document with signature fields into the viewer and lets users
+          sign with typed, drawn, or uploaded signatures. The signed result is returned as PDF.
+        </p>
+        <a routerLink="/sign" class="feature-link">
+          Sign Document
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon feature-icon-purple">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Tech Stack</h3>
+        <p class="feature-description">
+          Angular 19, ASP.NET Core on .NET 10, orchestrated with .NET Aspire.
+          TX Text Control v34 handles all document processing on the server side.
+        </p>
+        <span class="feature-link feature-link-muted">
+          .NET Aspire
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow Section -->
+  <section class="workflow">
+    <div class="workflow-header">
+      <h2 class="section-title">Try the Demo</h2>
+      <p class="section-subtitle">Walk through the signature workflow in three steps</p>
+    </div>
+    <div class="workflow-steps">
+      <div class="workflow-step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Open a Document</h3>
+          <p>Go to the Editor, pick one of the sample documents (or create a new one), and add a signature field.</p>
+        </div>
+      </div>
+      <div class="workflow-connector"></div>
+      <div class="workflow-step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Preview It</h3>
+          <p>Switch to the Viewer to see how the document looks to a recipient before signing.</p>
+        </div>
+      </div>
+      <div class="workflow-connector"></div>
+      <div class="workflow-step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Sign &amp; Download</h3>
+          <p>Open the Sign page, apply your signature, and download the result as a PDF.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

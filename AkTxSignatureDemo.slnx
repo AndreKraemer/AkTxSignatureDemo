@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Docs/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="AkTxSignatureDemo.AppHost/AkTxSignatureDemo.AppHost.csproj" />
+  <Project Path="aktxsignaturedemo.client/aktxsignaturedemo.client.esproj">
+    <Build />
+  </Project>
+  <Project Path="AkTxSignatureDemo.Server/AkTxSignatureDemo.Server.csproj" />
+  <Project Path="AkTxSignatureDemo.ServiceDefaults/AkTxSignatureDemo.ServiceDefaults.csproj" />
+</Solution>

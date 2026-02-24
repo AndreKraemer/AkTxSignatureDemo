@@ -1,0 +1,220 @@
+.viewer-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page-header {
+  padding: 20px 32px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.page-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.page-subtitle {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.page-header-badges {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 100px;
+  letter-spacing: 0.03em;
+}
+
+.badge-cyan {
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--color-accent);
+}
+
+.badge-green {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-success);
+}
+
+/* Document chip sections */
+.chips-section {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.chips-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.chips-section-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.chips-section-header .chips-section-label {
+  margin-bottom: 0;
+}
+
+.chips-refresh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.chips-refresh-btn:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.chips-empty {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 4px 0;
+}
+
+/* Document chips */
+.doc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.doc-chips-scrollable {
+  max-height: 112px;
+  overflow-y: auto;
+  flex-wrap: wrap;
+  padding-right: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+.doc-chips-scrollable::-webkit-scrollbar {
+  width: 4px;
+}
+
+.doc-chips-scrollable::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.doc-chips-scrollable::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 2px;
+}
+
+.doc-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.doc-chip:hover:not(:disabled):not(.active) {
+  background: var(--color-surface-hover);
+  border-color: var(--color-primary-light);
+  color: var(--color-text);
+}
+
+.doc-chip.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.doc-chip.active .chip-ext {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.doc-chip.active .chip-ext-signed {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.doc-chip.loading {
+  opacity: 0.7;
+}
+
+.doc-chip:disabled {
+  cursor: not-allowed;
+}
+
+.doc-chip-signed {
+  padding: 5px 12px;
+}
+
+.chip-ext {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: rgba(26, 86, 219, 0.08);
+  color: var(--color-primary);
+  letter-spacing: 0.03em;
+}
+
+.chip-ext-signed {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-success);
+}
+
+.chip-label {
+  flex: 1;
+}
+
+.chip-date {
+  font-size: 10px;
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.viewer-container {
+  flex: 1;
+  min-height: 0;
+}

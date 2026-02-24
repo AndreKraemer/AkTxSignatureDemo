@@ -1,0 +1,51 @@
+{
+  "name": "aktxsignaturedemo.client",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "run-script-os",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "start:windows": "ng serve --host=127.0.0.1 --port %PORT%",
+    "start:default": "ng serve --host=127.0.0.1 --port $PORT"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.html",
+        "options": {
+          "parser": "angular"
+        }
+      }
+    ]
+  },
+  "private": true,
+  "packageManager": "npm@10.8.2",
+  "dependencies": {
+    "@angular/cdk": "~19.2.19",
+    "@angular/common": "~19.2.18",
+    "@angular/compiler": "~19.2.18",
+    "@angular/core": "~19.2.18",
+    "@angular/forms": "~19.2.18",
+    "@angular/platform-browser": "~19.2.18",
+    "@angular/router": "~19.2.18",
+    "@txtextcontrol/tx-ng-document-editor": "^34.0.0",
+    "@txtextcontrol/tx-ng-document-viewer": "^34.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0",
+    "jest-editor-support": "*",
+    "run-script-os": "*"
+  },
+  "devDependencies": {
+    "@angular/build": "~19.2.21",
+    "@angular/cli": "~19.2.21",
+    "@angular/compiler-cli": "~19.2.18",
+    "jsdom": "^27.1.0",
+    "typescript": "~5.8.3",
+    "vitest": "^4.0.8"
+  }
+}

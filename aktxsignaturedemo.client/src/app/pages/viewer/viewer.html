@@ -1,0 +1,75 @@
+<div class="viewer-page">
+  <div class="page-header">
+    <div class="page-header-content">
+      <div class="page-title-group">
+        <h1 class="page-title">Document Viewer</h1>
+        <p class="page-subtitle">View documents with interactive toolbar, thumbnail pane, and text selection.</p>
+      </div>
+      <div class="page-header-badges">
+        <span class="badge badge-cyan">Viewer</span>
+        <span class="badge badge-green">Thumbnails</span>
+      </div>
+    </div>
+
+    <!-- Templates section -->
+    <div class="chips-section" *ngIf="documents.length > 0">
+      <span class="chips-section-label">Templates</span>
+      <div class="doc-chips">
+        <button
+          class="doc-chip"
+          *ngFor="let doc of documents"
+          [class.active]="activeDocument === doc.fileName"
+          [class.loading]="loadingDoc === doc.fileName"
+          (click)="selectDocument(doc)"
+          [disabled]="loadingDoc !== null || loadingSignedDoc !== null">
+          <span class="chip-ext">{{ doc.extension }}</span>
+          {{ doc.displayName }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Signed documents section -->
+    <div class="chips-section">
+      <div class="chips-section-header">
+        <span class="chips-section-label">Signed Documents</span>
+        <button class="chips-refresh-btn" (click)="refreshSignedDocuments()" title="Refresh signed documents list">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+          </svg>
+          Refresh
+        </button>
+      </div>
+      <div class="doc-chips doc-chips-scrollable" *ngIf="signedDocuments.length > 0">
+        <button
+          class="doc-chip doc-chip-signed"
+          *ngFor="let doc of signedDocuments"
+          [class.active]="activeDocument === doc.fileName"
+          [class.loading]="loadingSignedDoc === doc.fileName"
+          (click)="selectSignedDocument(doc)"
+          [disabled]="loadingDoc !== null || loadingSignedDoc !== null">
+          <span class="chip-ext chip-ext-signed">PDF</span>
+          <span class="chip-label">{{ doc.displayName }}</span>
+          <span class="chip-date">{{ doc.signedAt | date:'dd.MM.yy HH:mm' }}</span>
+        </button>
+      </div>
+      <p class="chips-empty" *ngIf="signedDocuments.length === 0">
+        No signed documents yet. Sign a document on the Sign page first.
+      </p>
+    </div>
+  </div>
+
+  <div class="viewer-container">
+    <tx-document-viewer
+      *ngIf="showViewer"
+      width="100%"
+      height="100%"
+      [basePath]="basePath"
+      dock="Fill"
+      [toolbarDocked]="true"
+      [showThumbnailPane]="true"
+      [isSelectionActivated]="true"
+      [documentData]="documentData">
+    </tx-document-viewer>
+  </div>
+</div>
